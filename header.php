@@ -14,7 +14,11 @@
 		<!-- site-header -->
 		<header class="site-header">
 			<!-- Logo -->
-			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><div id="a-circle"><div>A</div></div>ndre Edwards</a></h1>
+			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"> <!-- Makes it a link to home -->
+			<div id="a-circle"><div><?php $startofname = substr((get_bloginfo ('name')),0, 1);print $startofname;?></div> <!-- this div is made a circle in CSS, first letter of the site title is pulled out and put in the middle by the PHP -->
+			
+			</div><?php $endofname = substr((get_bloginfo ('name')),1, 20);print $endofname;?></a></h1> <!-- The reminder of the site name is printed out here -->
+			
 			<p class="site-description"><?php echo(get_bloginfo('description', 'display')); ?>
 			<!-- /Logo -->	
 			<!-- Banner -->
